@@ -1,0 +1,735 @@
+/* ========================================
+   Design System v2.0 - MBB Consulting Level
+   컨설팅펌 직무부트캠프 - McKinsey 스타일
+   ======================================== */
+
+/* ========================================
+   1. CSS 변수 정의 - MBB 컬러 시스템
+   ======================================== */
+
+:root {
+    /* Primary Colors - 신뢰와 권위 */
+    --mbb-navy: #003d5c;
+    --mbb-navy-light: #005a82;
+    --mbb-navy-dark: #002942;
+
+    /* Accent Colors - 액션과 하이라이트 */
+    --mbb-teal: #00a4a6;
+    --mbb-teal-light: #33b8ba;
+
+    /* Data Visualization */
+    --mbb-data-positive: #4fb3d9;
+    --mbb-data-negative: #ff6b6b;
+    --mbb-data-neutral: #a0a0a0;
+    --mbb-data-highlight: #ffd700;
+
+    /* Neutral Colors */
+    --mbb-text-primary: #1a1a1a;
+    --mbb-text-secondary: #556270;
+    --mbb-bg-white: #ffffff;
+    --mbb-bg-light: #f8f9fa;
+    --mbb-border: #e0e0e0;
+
+    /* Semantic Colors */
+    --mbb-success: #00b894;
+    --mbb-warning: #fdcb6e;
+    --mbb-error: #d63031;
+    --mbb-info: #74b9ff;
+
+    /* Typography */
+    --font-display: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Font Sizes */
+    --text-hero: 72px;
+    --text-h1: 56px;
+    --text-h2: 48px;
+    --text-h3: 36px;
+    --text-body-large: 28px;
+    --text-body: 24px;
+    --text-small: 20px;
+    --text-tiny: 16px;
+    --text-number-big: 64px;
+
+    /* Font Weights */
+    --weight-black: 900;
+    --weight-bold: 700;
+    --weight-semibold: 600;
+    --weight-medium: 500;
+    --weight-regular: 400;
+    --weight-light: 300;
+
+    /* Line Heights */
+    --leading-tight: 1.2;
+    --leading-normal: 1.5;
+    --leading-loose: 1.8;
+
+    /* Spacing (8px 기반) */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-2xl: 64px;
+    --space-3xl: 96px;
+
+    /* Layout */
+    --safe-zone-h: 120px;  /* 좌우 여백 */
+    --safe-zone-v: 80px;   /* 상하 여백 */
+
+    /* Effects */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+
+    /* A-E-D-B-D 단계별 색상 (기존 유지, 일부 조정) */
+    --assess: #8B5CF6;
+    --envision: #06B6D4;
+    --design: #10B981;
+    --build: #F59E0B;
+    --deploy: #EF4444;
+}
+
+/* ========================================
+   2. 기본 스타일 리셋
+   ======================================== */
+
+.reveal {
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    font-weight: var(--weight-regular);
+    color: var(--mbb-text-primary);
+    line-height: var(--leading-normal);
+}
+
+.reveal .slides {
+    text-align: left;
+}
+
+.reveal section {
+    padding: var(--safe-zone-v) var(--safe-zone-h);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* ========================================
+   3. 타이포그래피
+   ======================================== */
+
+/* 제목 계층 */
+.reveal h1 {
+    font-size: var(--text-h1);
+    font-weight: var(--weight-bold);
+    color: var(--mbb-navy);
+    line-height: var(--leading-tight);
+    margin: 0 0 var(--space-lg) 0;
+}
+
+.reveal h2 {
+    font-size: var(--text-h2);
+    font-weight: var(--weight-semibold);
+    color: var(--mbb-navy);
+    line-height: var(--leading-tight);
+    margin: 0 0 var(--space-xl) 0;
+    border-bottom: 4px solid var(--mbb-teal);
+    padding-bottom: var(--space-sm);
+}
+
+.reveal h3 {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-semibold);
+    color: var(--mbb-navy);
+    line-height: var(--leading-tight);
+    margin: 0 0 var(--space-md) 0;
+}
+
+/* 본문 */
+.reveal p {
+    font-size: var(--text-body);
+    line-height: var(--leading-normal);
+    margin: 0 0 var(--space-md) 0;
+    color: var(--mbb-text-primary);
+}
+
+.reveal .text-large {
+    font-size: var(--text-body-large);
+    font-weight: var(--weight-medium);
+    line-height: var(--leading-normal);
+}
+
+.reveal .text-small {
+    font-size: var(--text-small);
+    color: var(--mbb-text-secondary);
+}
+
+/* 강조 */
+.reveal strong {
+    font-weight: var(--weight-semibold);
+    color: var(--mbb-navy);
+}
+
+.reveal em {
+    font-style: normal;
+    color: var(--mbb-teal);
+    font-weight: var(--weight-medium);
+}
+
+/* 리스트 */
+.reveal ul,
+.reveal ol {
+    margin: 0 0 var(--space-lg) 0;
+    padding-left: var(--space-xl);
+}
+
+.reveal li {
+    margin-bottom: var(--space-sm);
+    line-height: var(--leading-normal);
+}
+
+.reveal li::marker {
+    color: var(--mbb-teal);
+    font-weight: var(--weight-bold);
+}
+
+/* ========================================
+   4. 슬라이드 타입 - Type 1: Hero Slide
+   ======================================== */
+
+.reveal .hero-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--mbb-navy) 0%, var(--mbb-navy-dark) 100%);
+    color: white;
+    padding: var(--space-3xl);
+}
+
+.reveal .hero-slide h1 {
+    font-size: var(--text-hero);
+    font-weight: var(--weight-black);
+    color: white;
+    margin-bottom: var(--space-lg);
+    line-height: var(--leading-tight);
+}
+
+.reveal .hero-slide .subtitle {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-regular);
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: var(--space-md);
+}
+
+.reveal .hero-slide .visual {
+    font-size: 96px;
+    margin-bottom: var(--space-xl);
+}
+
+/* ========================================
+   5. 슬라이드 타입 - Type 2: One Big Visual
+   ======================================== */
+
+.reveal .big-visual-slide {
+    display: flex;
+    flex-direction: column;
+}
+
+.reveal .big-visual-slide h2 {
+    margin-bottom: var(--space-md);
+}
+
+.reveal .big-visual-slide .main-visual {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--space-xl) 0;
+}
+
+.reveal .big-visual-slide .so-what {
+    background: linear-gradient(135deg, var(--mbb-data-highlight) 0%, #ffa500 100%);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    color: var(--mbb-navy);
+    font-size: var(--text-body-large);
+    font-weight: var(--weight-semibold);
+    margin-top: auto;
+    box-shadow: var(--shadow-md);
+}
+
+.reveal .big-visual-slide .so-what::before {
+    content: "💡 ";
+    font-size: var(--text-h3);
+    margin-right: var(--space-sm);
+}
+
+/* ========================================
+   6. 슬라이드 타입 - Type 3: Data Visualization
+   ======================================== */
+
+.reveal .data-slide .big-numbers {
+    display: flex;
+    justify-content: space-around;
+    margin: var(--space-xl) 0;
+    gap: var(--space-lg);
+}
+
+.reveal .data-slide .number-card {
+    text-align: center;
+    padding: var(--space-lg);
+    background: var(--mbb-bg-light);
+    border-radius: var(--radius-md);
+    flex: 1;
+    border-top: 4px solid var(--mbb-teal);
+}
+
+.reveal .data-slide .big-number {
+    font-size: var(--text-number-big);
+    font-weight: var(--weight-black);
+    color: var(--mbb-teal);
+    font-family: var(--font-mono);
+    line-height: 1;
+    margin-bottom: var(--space-sm);
+}
+
+.reveal .data-slide .number-label {
+    font-size: var(--text-body);
+    color: var(--mbb-text-secondary);
+    font-weight: var(--weight-medium);
+}
+
+.reveal .data-slide .insight-box {
+    background: linear-gradient(135deg, var(--mbb-teal) 0%, var(--mbb-teal-light) 100%);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    color: white;
+    font-size: var(--text-body);
+    font-weight: var(--weight-semibold);
+    margin-top: var(--space-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.reveal .data-slide .insight-box::before {
+    content: "📊 ";
+    font-size: var(--text-h3);
+    margin-right: var(--space-sm);
+}
+
+/* ========================================
+   7. 슬라이드 타입 - Type 4: Framework
+   ======================================== */
+
+.reveal .framework-slide .framework-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--space-xl) 0;
+}
+
+/* 2x2 Matrix */
+.reveal .matrix-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.reveal .matrix-cell {
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.reveal .matrix-cell h4 {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+}
+
+.reveal .matrix-cell p {
+    font-size: var(--text-body);
+    margin: 0;
+}
+
+.reveal .matrix-cell ul {
+    margin: var(--space-sm) 0 0 0;
+    padding-left: var(--space-md);
+}
+
+.reveal .matrix-cell li {
+    font-size: var(--text-small);
+    margin-bottom: var(--space-xs);
+}
+
+/* Matrix 사분면 색상 */
+.reveal .matrix-cell.q1 {
+    background: linear-gradient(135deg, var(--mbb-success) 0%, #00d2a0 100%);
+    color: white;
+}
+
+.reveal .matrix-cell.q2 {
+    background: linear-gradient(135deg, var(--mbb-warning) 0%, #ffd93d 100%);
+    color: var(--mbb-navy);
+}
+
+.reveal .matrix-cell.q3 {
+    background: var(--mbb-bg-light);
+    border: 2px solid var(--mbb-border);
+    color: var(--mbb-text-primary);
+}
+
+.reveal .matrix-cell.q4 {
+    background: var(--mbb-bg-light);
+    border: 2px solid var(--mbb-text-secondary);
+    color: var(--mbb-text-secondary);
+}
+
+/* Matrix 축 라벨 */
+.reveal .matrix-axes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-md);
+    font-size: var(--text-small);
+    color: var(--mbb-text-secondary);
+}
+
+.reveal .framework-note {
+    background: var(--mbb-bg-light);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--mbb-warning);
+    margin-top: var(--space-lg);
+}
+
+.reveal .framework-note::before {
+    content: "⚠️ ";
+    margin-right: var(--space-xs);
+}
+
+/* ========================================
+   8. 슬라이드 타입 - Type 5: Process Flow
+   ======================================== */
+
+.reveal .process-flow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: var(--space-xl) 0;
+    gap: var(--space-sm);
+}
+
+.reveal .process-step {
+    flex: 1;
+    text-align: center;
+    padding: var(--space-lg);
+    background: var(--mbb-bg-light);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+}
+
+.reveal .process-step.active {
+    background: linear-gradient(135deg, var(--mbb-teal) 0%, var(--mbb-teal-light) 100%);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.reveal .process-step .step-icon {
+    font-size: 48px;
+    margin-bottom: var(--space-sm);
+}
+
+.reveal .process-step .step-number {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--mbb-teal);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-body-large);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+}
+
+.reveal .process-step.active .step-number {
+    background: white;
+    color: var(--mbb-teal);
+}
+
+.reveal .process-step .step-name {
+    font-size: var(--text-body);
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-xs);
+}
+
+.reveal .process-step .step-desc {
+    font-size: var(--text-small);
+    color: var(--mbb-text-secondary);
+}
+
+.reveal .process-step.active .step-desc {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.reveal .process-arrow {
+    font-size: var(--text-h2);
+    color: var(--mbb-text-secondary);
+}
+
+.reveal .process-meta {
+    display: flex;
+    justify-content: space-around;
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    background: var(--mbb-bg-light);
+    border-radius: var(--radius-md);
+}
+
+.reveal .process-meta .meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-body);
+}
+
+.reveal .process-meta .meta-icon {
+    font-size: var(--text-body-large);
+}
+
+/* ========================================
+   9. 인사이트 박스들
+   ======================================== */
+
+.reveal .insight-box-container {
+    margin: var(--space-lg) 0;
+}
+
+/* So What Box */
+.reveal .so-what-box {
+    background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: var(--radius-md);
+    color: var(--mbb-navy);
+    font-size: var(--text-body-large);
+    font-weight: var(--weight-semibold);
+    box-shadow: var(--shadow-md);
+    margin: var(--space-xl) 0;
+}
+
+.reveal .so-what-box::before {
+    content: "💡 핵심: ";
+    font-weight: var(--weight-bold);
+}
+
+/* Insight Box */
+.reveal .insight-box-teal {
+    background: linear-gradient(135deg, var(--mbb-teal) 0%, var(--mbb-teal-light) 100%);
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: var(--radius-md);
+    color: white;
+    font-size: var(--text-body);
+    font-weight: var(--weight-semibold);
+    box-shadow: var(--shadow-md);
+    margin: var(--space-xl) 0;
+}
+
+.reveal .insight-box-teal::before {
+    content: "🎯 ";
+    font-size: var(--text-h3);
+    margin-right: var(--space-sm);
+}
+
+/* Warning Box */
+.reveal .warning-box {
+    background: linear-gradient(135deg, var(--mbb-data-negative) 0%, #ff5252 100%);
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: var(--radius-md);
+    color: white;
+    font-size: var(--text-body);
+    font-weight: var(--weight-semibold);
+    box-shadow: var(--shadow-md);
+    margin: var(--space-xl) 0;
+}
+
+.reveal .warning-box::before {
+    content: "⚠️ ";
+    font-size: var(--text-h3);
+    margin-right: var(--space-sm);
+}
+
+/* Tip Box */
+.reveal .tip-box {
+    background: var(--mbb-bg-light);
+    border-left: 4px solid var(--mbb-teal);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-body);
+    margin: var(--space-lg) 0;
+}
+
+.reveal .tip-box::before {
+    content: "💡 Pro Tip: ";
+    font-weight: var(--weight-bold);
+    color: var(--mbb-teal);
+}
+
+/* ========================================
+   10. 테이블 스타일
+   ======================================== */
+
+.reveal table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-lg) 0;
+    font-size: var(--text-body);
+}
+
+.reveal table th {
+    background: var(--mbb-navy);
+    color: white;
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+    font-weight: var(--weight-semibold);
+    border-bottom: 3px solid var(--mbb-teal);
+}
+
+.reveal table td {
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--mbb-border);
+    vertical-align: top;
+}
+
+.reveal table tbody tr:hover {
+    background: var(--mbb-bg-light);
+}
+
+.reveal table tbody tr:nth-child(even) {
+    background: rgba(248, 249, 250, 0.5);
+}
+
+/* ========================================
+   11. Phase Title 슬라이드 (A-E-D-B-D)
+   ======================================== */
+
+.reveal .phase-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: var(--space-3xl);
+}
+
+.reveal .phase-title .phase-icon {
+    font-size: 120px;
+    font-weight: var(--weight-black);
+    margin-bottom: var(--space-xl);
+    background: white;
+    color: inherit;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reveal .phase-title h1 {
+    font-size: var(--text-hero);
+    font-weight: var(--weight-black);
+    color: white;
+    margin-bottom: var(--space-md);
+}
+
+.reveal .phase-title .phase-subtitle {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-regular);
+    opacity: 0.95;
+}
+
+.reveal .assess-phase {
+    background: linear-gradient(135deg, var(--assess) 0%, #6D28D9 100%);
+}
+
+.reveal .assess-phase .phase-icon {
+    color: var(--assess);
+}
+
+.reveal .envision-phase {
+    background: linear-gradient(135deg, var(--envision) 0%, #0891B2 100%);
+}
+
+.reveal .envision-phase .phase-icon {
+    color: var(--envision);
+}
+
+.reveal .design-phase {
+    background: linear-gradient(135deg, var(--design) 0%, #059669 100%);
+}
+
+.reveal .design-phase .phase-icon {
+    color: var(--design);
+}
+
+.reveal .build-phase {
+    background: linear-gradient(135deg, var(--build) 0%, #D97706 100%);
+}
+
+.reveal .build-phase .phase-icon {
+    color: var(--build);
+}
+
+.reveal .deploy-phase {
+    background: linear-gradient(135deg, var(--deploy) 0%, #DC2626 100%);
+}
+
+.reveal .deploy-phase .phase-icon {
+    color: var(--deploy);
+}
+
+/* ========================================
+   12. 반응형 조정
+   ======================================== */
+
+@media (max-width: 1280px) {
+    :root {
+        --text-hero: 56px;
+        --text-h1: 48px;
+        --text-h2: 40px;
+        --text-h3: 32px;
+        --text-body-large: 24px;
+        --text-body: 20px;
+        --text-small: 18px;
+        --text-number-big: 48px;
+    }
+
+    .reveal .matrix-2x2 {
+        grid-template-columns: 1fr;
+    }
+
+    .reveal .process-flow {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .reveal .process-arrow {
+        transform: rotate(90deg);
+    }
+}
