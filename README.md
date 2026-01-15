@@ -1,6 +1,8 @@
 # 컨설팅펌 직무부트캠프 강의자료
 
 > **GitHub 저장소**: https://github.com/TurtleLEE-teacher/Consulting_Bootcamp
+>
+> **슬라이드 보기**: https://raw.githack.com/TurtleLEE-teacher/Consulting_Bootcamp/claude/resume-session-chGNj/slides/index.html
 
 컨설팅 산업과 A-E-D-B-D 방법론을 다루는 2~2.5시간 분량의 강의 슬라이드 프로젝트입니다.
 
@@ -75,6 +77,30 @@ http://localhost:3000?print-pdf
 - 글머리 기호 최대 5개
 - 다이어그램 우선, 텍스트 최소화
 - 일관된 색상 팔레트 유지
+
+### 4. 슬라이드 보는 방법
+
+#### 온라인으로 보기 (추천)
+**GitHub에서 직접 보기**: [슬라이드 열기](https://raw.githack.com/TurtleLEE-teacher/Consulting_Bootcamp/claude/resume-session-chGNj/slides/index.html)
+
+- 별도 설치 없이 브라우저에서 바로 확인
+- 화살표 키로 슬라이드 이동
+- `ESC` 키로 전체 슬라이드 보기
+
+#### 로컬에서 보기
+```bash
+# 저장소 클론
+git clone https://github.com/TurtleLEE-teacher/Consulting_Bootcamp.git
+cd Consulting_Bootcamp
+git checkout claude/resume-session-chGNj
+
+# 로컬 서버 실행
+cd slides
+python3 -m http.server 3000
+
+# 브라우저에서 열기
+# http://localhost:3000
+```
 
 ## 강의 구성
 
