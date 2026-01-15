@@ -1,0 +1,1155 @@
+/* ========================================
+   컨설팅펌 직무부트캠프 - 커스텀 테마
+   ======================================== */
+
+/* CSS 변수 정의 (CLAUDE.md 디자인 시스템) */
+:root {
+    /* Primary - 메인 강조색 */
+    --primary: #2563EB;
+    --primary-light: #3B82F6;
+    --primary-dark: #1D4ED8;
+
+    /* Secondary - 보조색 */
+    --secondary: #10B981;
+    --secondary-light: #34D399;
+
+    /* Accent - 포인트 */
+    --accent: #F59E0B;
+    --accent-alt: #EF4444;
+
+    /* Neutral - 텍스트, 배경 */
+    --text-dark: #1F2937;
+    --text-light: #6B7280;
+    --bg-light: #F9FAFB;
+    --bg-white: #FFFFFF;
+
+    /* A-E-D-B-D 단계별 색상 */
+    --assess: #8B5CF6;
+    --envision: #06B6D4;
+    --design: #10B981;
+    --build: #F59E0B;
+    --deploy: #EF4444;
+
+    /* 폰트 패밀리 */
+    --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-code: 'JetBrains Mono', monospace;
+
+    /* 폰트 사이즈 */
+    --title-size: 48px;
+    --subtitle-size: 32px;
+    --body-size: 24px;
+    --caption-size: 18px;
+
+    /* 폰트 웨이트 */
+    --weight-bold: 700;
+    --weight-semibold: 600;
+    --weight-regular: 400;
+
+    /* 레이아웃 */
+    --slide-padding-v: 60px;
+    --slide-padding-h: 80px;
+    --element-gap: 24px;
+}
+
+/* ========================================
+   기본 스타일
+   ======================================== */
+
+.reveal {
+    font-family: var(--font-main);
+    font-size: var(--body-size);
+    color: var(--text-dark);
+}
+
+.reveal .slides {
+    text-align: left;
+}
+
+.reveal section {
+    padding: var(--slide-padding-v) var(--slide-padding-h);
+    height: 100%;
+}
+
+/* ========================================
+   타이포그래피
+   ======================================== */
+
+.reveal h1 {
+    font-size: var(--title-size);
+    font-weight: var(--weight-bold);
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.reveal h2 {
+    font-size: var(--subtitle-size);
+    font-weight: var(--weight-semibold);
+    color: var(--text-dark);
+    margin-bottom: var(--element-gap);
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 12px;
+}
+
+.reveal h3 {
+    font-size: 28px;
+    font-weight: var(--weight-semibold);
+    color: var(--text-dark);
+    margin-bottom: 16px;
+}
+
+.reveal p {
+    font-size: var(--body-size);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.reveal ul, .reveal ol {
+    margin: 0 0 var(--element-gap) 0;
+}
+
+.reveal li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.reveal strong {
+    font-weight: var(--weight-semibold);
+    color: var(--primary);
+}
+
+.reveal .subtitle {
+    font-size: 28px;
+    color: var(--text-light);
+    font-weight: var(--weight-regular);
+}
+
+.reveal .note {
+    font-size: var(--caption-size);
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: var(--element-gap);
+}
+
+/* ========================================
+   타이틀 슬라이드
+   ======================================== */
+
+.reveal .title-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+}
+
+.reveal .title-slide h1 {
+    color: white;
+    font-size: 64px;
+    margin-bottom: 24px;
+}
+
+.reveal .title-slide .subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 32px;
+}
+
+/* ========================================
+   섹션 구분 슬라이드
+   ======================================== */
+
+.reveal .section-divider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--bg-light);
+}
+
+.reveal .section-divider h2 {
+    border: none;
+    font-size: 56px;
+    color: var(--primary);
+}
+
+/* ========================================
+   Phase Title 슬라이드 (A-E-D-B-D)
+   ======================================== */
+
+.reveal .phase-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.reveal .phase-title .phase-icon {
+    font-size: 120px;
+    font-weight: var(--weight-bold);
+    margin-bottom: 24px;
+}
+
+.reveal .phase-title h1 {
+    color: white;
+    font-size: 72px;
+    margin-bottom: 16px;
+}
+
+.reveal .phase-title .phase-subtitle {
+    font-size: 32px;
+    opacity: 0.95;
+}
+
+.reveal .assess-phase {
+    background: linear-gradient(135deg, var(--assess) 0%, #6D28D9 100%);
+}
+
+.reveal .envision-phase {
+    background: linear-gradient(135deg, var(--envision) 0%, #0891B2 100%);
+}
+
+.reveal .design-phase {
+    background: linear-gradient(135deg, var(--design) 0%, #059669 100%);
+}
+
+.reveal .build-phase {
+    background: linear-gradient(135deg, var(--build) 0%, #D97706 100%);
+}
+
+.reveal .deploy-phase {
+    background: linear-gradient(135deg, var(--deploy) 0%, #DC2626 100%);
+}
+
+/* ========================================
+   레이아웃: 2분할
+   ======================================== */
+
+.reveal .two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.reveal .two-column.equal {
+    align-items: center;
+}
+
+.reveal .two-column .left,
+.reveal .two-column .right {
+    padding: 24px;
+}
+
+/* ========================================
+   레이아웃: 3분할
+   ======================================== */
+
+.reveal .three-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.reveal .three-columns .column {
+    text-align: center;
+    padding: 24px;
+    background: var(--bg-light);
+    border-radius: 12px;
+}
+
+.reveal .three-columns .icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+/* ========================================
+   아젠다
+   ======================================== */
+
+.reveal .agenda {
+    display: flex;
+    flex-direction: column;
+    gap: var(--element-gap);
+}
+
+.reveal .agenda-item {
+    display: flex;
+    align-items: start;
+    gap: 24px;
+    padding: 24px;
+    background: var(--bg-light);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary);
+}
+
+.reveal .agenda-item .number {
+    font-size: 48px;
+    font-weight: var(--weight-bold);
+    color: var(--primary);
+    line-height: 1;
+}
+
+.reveal .agenda-item .content h3 {
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.reveal .agenda-item .content p {
+    margin-bottom: 0;
+    color: var(--text-light);
+    font-size: 20px;
+}
+
+/* ========================================
+   정의 박스
+   ======================================== */
+
+.reveal .definition {
+    text-align: center;
+    padding: 48px;
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    border-radius: 16px;
+    margin-bottom: var(--element-gap);
+}
+
+.reveal .definition .quote {
+    font-size: 36px;
+    font-weight: var(--weight-semibold);
+    color: white;
+    margin: 0;
+}
+
+/* ========================================
+   키 포인트
+   ======================================== */
+
+.reveal .key-points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.reveal .key-points li {
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    background: var(--bg-light);
+    border-left: 4px solid var(--primary);
+    border-radius: 8px;
+}
+
+/* ========================================
+   테이블
+   ======================================== */
+
+.reveal table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--element-gap) 0;
+}
+
+.reveal table th {
+    background: var(--primary);
+    color: white;
+    padding: 16px;
+    text-align: left;
+    font-weight: var(--weight-semibold);
+}
+
+.reveal table td {
+    padding: 16px;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.reveal table tbody tr:hover {
+    background: var(--bg-light);
+}
+
+.reveal .comparison-table th:first-child {
+    background: var(--text-dark);
+}
+
+/* ========================================
+   A-E-D-B-D 프로세스 플로우
+   ======================================== */
+
+.reveal .process-flow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: var(--element-gap) 0;
+}
+
+.reveal .process-step {
+    flex: 1;
+    text-align: center;
+    padding: 24px;
+    border-radius: 12px;
+    background: var(--bg-light);
+}
+
+.reveal .process-step .step-icon {
+    font-size: 48px;
+    font-weight: var(--weight-bold);
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.reveal .process-step.assess .step-icon {
+    background: var(--assess);
+}
+
+.reveal .process-step.envision .step-icon {
+    background: var(--envision);
+}
+
+.reveal .process-step.design .step-icon {
+    background: var(--design);
+}
+
+.reveal .process-step.build .step-icon {
+    background: var(--build);
+}
+
+.reveal .process-step.deploy .step-icon {
+    background: var(--deploy);
+}
+
+.reveal .process-step .step-name {
+    font-size: 24px;
+    font-weight: var(--weight-semibold);
+    margin-bottom: 8px;
+}
+
+.reveal .process-step .step-desc {
+    font-size: 18px;
+    color: var(--text-light);
+}
+
+.reveal .process-flow .arrow {
+    font-size: 32px;
+    color: var(--text-light);
+    margin: 0 16px;
+}
+
+/* ========================================
+   Phase Questions Table
+   ======================================== */
+
+.reveal .phase-questions tbody tr {
+    border-left: 4px solid transparent;
+}
+
+.reveal .phase-questions .assess-row {
+    border-left-color: var(--assess);
+}
+
+.reveal .phase-questions .envision-row {
+    border-left-color: var(--envision);
+}
+
+.reveal .phase-questions .design-row {
+    border-left-color: var(--design);
+}
+
+.reveal .phase-questions .build-row {
+    border-left-color: var(--build);
+}
+
+.reveal .phase-questions .deploy-row {
+    border-left-color: var(--deploy);
+}
+
+/* ========================================
+   Preview Box
+   ======================================== */
+
+.reveal .preview-box {
+    background: var(--bg-light);
+    padding: 32px;
+    border-radius: 12px;
+    border: 2px solid var(--primary);
+}
+
+.reveal .preview-list {
+    list-style: none;
+    padding: 0;
+}
+
+.reveal .preview-list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.reveal .phase-label {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: var(--weight-semibold);
+    color: white;
+    min-width: 120px;
+    text-align: center;
+}
+
+.reveal .phase-label.assess {
+    background: var(--assess);
+}
+
+.reveal .phase-label.envision {
+    background: var(--envision);
+}
+
+.reveal .phase-label.design {
+    background: var(--design);
+}
+
+.reveal .phase-label.build {
+    background: var(--build);
+}
+
+.reveal .phase-label.deploy {
+    background: var(--deploy);
+}
+
+/* ========================================
+   Pentagon (5C 역량)
+   ======================================== */
+
+.reveal .pentagon {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 48px auto;
+}
+
+.reveal .pentagon-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: var(--weight-bold);
+    z-index: 10;
+}
+
+.reveal .pentagon-point {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: var(--bg-light);
+    border: 3px solid var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: var(--weight-semibold);
+    padding: 16px;
+}
+
+.reveal .pentagon-point.p1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.reveal .pentagon-point.p2 {
+    top: 35%;
+    right: 0;
+}
+
+.reveal .pentagon-point.p3 {
+    bottom: 10%;
+    right: 15%;
+}
+
+.reveal .pentagon-point.p4 {
+    bottom: 10%;
+    left: 15%;
+}
+
+.reveal .pentagon-point.p5 {
+    top: 35%;
+    left: 0;
+}
+
+/* ========================================
+   Competency Card (역량 카드)
+   ======================================== */
+
+.reveal .competency-card {
+    background: var(--bg-light);
+    padding: 32px;
+    border-radius: 12px;
+    border-left: 6px solid var(--primary);
+}
+
+.reveal .competency-card .icon-large {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.reveal .competency-card .example {
+    margin-top: 24px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+    font-size: 20px;
+}
+
+/* ========================================
+   Career Ladder (커리어 사다리)
+   ======================================== */
+
+.reveal .career-ladder {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 16px;
+    margin: var(--element-gap) auto;
+    max-width: 800px;
+}
+
+.reveal .career-ladder .level {
+    padding: 20px 32px;
+    background: var(--bg-light);
+    border-radius: 8px;
+    border-left: 6px solid var(--primary);
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: center;
+    gap: 24px;
+}
+
+.reveal .career-ladder .level .title {
+    font-size: 22px;
+    font-weight: var(--weight-semibold);
+}
+
+.reveal .career-ladder .level .years {
+    font-size: 18px;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.reveal .career-ladder .level .role {
+    font-size: 18px;
+    color: var(--text-light);
+    text-align: right;
+}
+
+/* ========================================
+   Daily Schedule (일과)
+   ======================================== */
+
+.reveal .daily-schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.reveal .daily-schedule .time-slot {
+    display: flex;
+    gap: 24px;
+    padding: 12px 24px;
+    background: var(--bg-light);
+    border-radius: 8px;
+    align-items: center;
+}
+
+.reveal .daily-schedule .time {
+    font-weight: var(--weight-semibold);
+    color: var(--primary);
+    min-width: 80px;
+    font-size: 20px;
+}
+
+.reveal .daily-schedule .activity {
+    font-size: 20px;
+}
+
+/* ========================================
+   Pyramid (펌 유형)
+   ======================================== */
+
+.reveal .pyramid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: var(--element-gap) auto;
+    max-width: 900px;
+}
+
+.reveal .pyramid-level {
+    padding: 24px 32px;
+    border-radius: 8px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.reveal .pyramid-level.tier-1 {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+}
+
+.reveal .pyramid-level.tier-2 {
+    background: linear-gradient(135deg, var(--secondary) 0%, #059669 100%);
+    color: white;
+    margin: 0 60px;
+}
+
+.reveal .pyramid-level.tier-3 {
+    background: linear-gradient(135deg, var(--accent) 0%, #D97706 100%);
+    color: white;
+    margin: 0 120px;
+}
+
+.reveal .pyramid-level .tier-label {
+    font-size: 18px;
+    font-weight: var(--weight-bold);
+    min-width: 80px;
+}
+
+.reveal .pyramid-level .tier-content strong {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.reveal .pyramid-level .tier-content p {
+    margin: 0;
+    font-size: 18px;
+    opacity: 0.95;
+}
+
+/* ========================================
+   Domains, Market Grid
+   ======================================== */
+
+.reveal .domains,
+.reveal .market-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: var(--element-gap) 0;
+}
+
+.reveal .domain-card,
+.reveal .market-section {
+    background: var(--bg-light);
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.reveal .domain-card h3,
+.reveal .market-section h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.reveal .domain-card .tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--primary);
+    color: white;
+    border-radius: 12px;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.reveal .logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.reveal .logo-item {
+    padding: 8px 16px;
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: var(--weight-semibold);
+}
+
+.reveal .trend {
+    margin-top: var(--element-gap);
+    padding: 16px 24px;
+    background: var(--accent);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: var(--weight-semibold);
+}
+
+/* ========================================
+   Spectrum
+   ======================================== */
+
+.reveal .spectrum {
+    margin: 48px 0;
+}
+
+.reveal .spectrum-bar {
+    position: relative;
+    height: 120px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+    border-radius: 60px;
+}
+
+.reveal .spectrum-item {
+    position: absolute;
+    top: -40px;
+}
+
+.reveal .spectrum-item .marker {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 4px solid var(--text-dark);
+    border-radius: 50%;
+    margin: 0 auto 8px;
+}
+
+.reveal .spectrum-item .label {
+    font-size: 22px;
+    font-weight: var(--weight-semibold);
+    margin-bottom: 4px;
+    white-space: nowrap;
+}
+
+.reveal .spectrum-item .desc {
+    font-size: 18px;
+    color: var(--text-light);
+    white-space: nowrap;
+}
+
+/* ========================================
+   Content Box
+   ======================================== */
+
+.reveal .content-box {
+    background: var(--bg-light);
+    padding: 32px;
+    border-radius: 12px;
+    margin-bottom: var(--element-gap);
+}
+
+.reveal .content-box h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.reveal .characteristics {
+    list-style: none;
+    padding: 0;
+}
+
+.reveal .characteristics li {
+    padding: 12px 0;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.reveal .characteristics li:last-child {
+    border-bottom: none;
+}
+
+/* ========================================
+   Diagrams
+   ======================================== */
+
+.reveal .diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 32px;
+    margin-top: 24px;
+}
+
+.reveal .diagram.stairs {
+    gap: 8px;
+}
+
+.reveal .diagram.stairs .step {
+    padding: 24px 32px;
+    background: var(--primary);
+    color: white;
+    border-radius: 8px;
+    font-weight: var(--weight-semibold);
+    transform: translateY(calc(var(--i, 0) * -20px));
+}
+
+.reveal .diagram.stairs .step:nth-child(1) {
+    --i: 3;
+}
+
+.reveal .diagram.stairs .step:nth-child(2) {
+    --i: 2;
+}
+
+.reveal .diagram.stairs .step:nth-child(3) {
+    --i: 1;
+}
+
+.reveal .diagram.stairs .step:nth-child(4) {
+    --i: 0;
+}
+
+.reveal .diagram.rebuild {
+    font-size: 32px;
+    font-weight: var(--weight-semibold);
+}
+
+.reveal .diagram.rebuild .destroy {
+    color: var(--accent-alt);
+}
+
+.reveal .diagram.rebuild .arrow {
+    color: var(--text-light);
+}
+
+.reveal .diagram.rebuild .new {
+    color: var(--secondary);
+}
+
+/* ========================================
+   Decision Tree
+   ======================================== */
+
+.reveal .decision-tree {
+    margin: var(--element-gap) 0;
+}
+
+.reveal .decision-tree .question {
+    text-align: center;
+    font-size: 28px;
+    font-weight: var(--weight-semibold);
+    padding: 24px;
+    background: var(--bg-light);
+    border-radius: 12px;
+    margin-bottom: 32px;
+}
+
+.reveal .decision-tree .branches {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+.reveal .decision-tree .answer {
+    text-align: center;
+    font-size: 24px;
+    font-weight: var(--weight-semibold);
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.reveal .decision-tree .result {
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.reveal .decision-tree .result.pi {
+    background: linear-gradient(135deg, var(--secondary-light) 0%, var(--secondary) 100%);
+    color: white;
+}
+
+.reveal .decision-tree .result.bpr {
+    background: linear-gradient(135deg, var(--accent) 0%, #D97706 100%);
+    color: white;
+}
+
+.reveal .decision-tree .result strong {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.reveal .decision-tree .result p {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* ========================================
+   Growth Principles, Exit Paths
+   ======================================== */
+
+.reveal .growth-principles,
+.reveal .exit-paths {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+    margin: var(--element-gap) 0;
+}
+
+.reveal .principle,
+.reveal .path {
+    background: var(--bg-light);
+    padding: 32px;
+    border-radius: 12px;
+    border-top: 4px solid var(--primary);
+}
+
+.reveal .path .path-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+/* ========================================
+   Summary
+   ======================================== */
+
+.reveal .summary-box {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    padding: 48px;
+    border-radius: 16px;
+    color: white;
+}
+
+.reveal .summary-box h3 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 24px;
+}
+
+.reveal .summary-list {
+    list-style: none;
+    padding: 0;
+}
+
+.reveal .summary-list li {
+    font-size: 24px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reveal .summary-list li:last-child {
+    border-bottom: none;
+}
+
+.reveal .transition {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.reveal .transition .large {
+    font-size: 28px;
+    font-weight: var(--weight-semibold);
+    color: var(--primary);
+}
+
+/* ========================================
+   Phase Overview
+   ======================================== */
+
+.reveal .phase-overview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: var(--element-gap) 0;
+}
+
+.reveal .phase-overview .overview-item {
+    background: var(--bg-light);
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.reveal .phase-overview .overview-item h3 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+/* ========================================
+   Role Table
+   ======================================== */
+
+.reveal .role-table tbody tr:nth-child(odd) {
+    background: var(--bg-light);
+}
+
+/* ========================================
+   Timeline
+   ======================================== */
+
+.reveal .timeline {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    margin: var(--element-gap) 0;
+}
+
+.reveal .timeline-item {
+    flex: 1;
+    text-align: center;
+    padding: 24px;
+    background: var(--bg-light);
+    border-radius: 12px;
+}
+
+.reveal .timeline-item .label {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.reveal .timeline-item .value {
+    font-size: 24px;
+    font-weight: var(--weight-semibold);
+    color: var(--primary);
+}
+
+/* ========================================
+   Highlight
+   ======================================== */
+
+.reveal .highlight-pi {
+    color: var(--secondary);
+}
+
+.reveal .highlight-bpr {
+    color: var(--accent);
+}
+
+/* ========================================
+   반응형 조정
+   ======================================== */
+
+@media (max-width: 1280px) {
+    :root {
+        --title-size: 40px;
+        --subtitle-size: 28px;
+        --body-size: 20px;
+        --caption-size: 16px;
+    }
+}

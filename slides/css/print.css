@@ -1,0 +1,76 @@
+/* ========================================
+   PDF 출력용 스타일
+   ======================================== */
+
+@media print {
+    /* 페이지 설정 */
+    @page {
+        size: 1920px 1080px;
+        margin: 0;
+    }
+
+    /* 기본 리셋 */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+
+    /* 배경 그래픽 활성화 */
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* 슬라이드 간격 제거 */
+    .reveal .slides section {
+        page-break-after: always;
+        page-break-inside: avoid;
+    }
+
+    /* 컨트롤 숨기기 */
+    .reveal .controls,
+    .reveal .progress,
+    .reveal .slide-number {
+        display: none !important;
+    }
+
+    /* 배경색 강제 적용 */
+    .reveal .title-slide,
+    .reveal .phase-title,
+    .reveal .section-divider {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* 그라데이션 보존 */
+    .reveal .title-slide,
+    .reveal .assess-phase,
+    .reveal .envision-phase,
+    .reveal .design-phase,
+    .reveal .build-phase,
+    .reveal .deploy-phase,
+    .reveal .pyramid-level,
+    .reveal .definition,
+    .reveal .summary-box {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* 글꼴 크기 유지 */
+    .reveal {
+        font-size: 24px !important;
+    }
+
+    /* 박스 쉐도우 제거 (인쇄 품질 향상) */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    /* 링크 색상 유지 */
+    a {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+}
