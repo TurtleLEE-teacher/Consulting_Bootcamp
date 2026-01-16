@@ -24,9 +24,11 @@
             <!-- Part 1: 컨설팅 개요 + 커리어 (30장) -->
 
             <!-- 1.0 오프닝 (2장) -->
-            <section id="P1-001" class="title-slide">
+            <!-- Type 1: Hero Slide -->
+            <section id="P1-001" class="hero-slide">
+                <div class="visual">🎯</div>
                 <h1>컨설팅펌 직무부트캠프</h1>
-                <p class="subtitle">컨설팅 산업 이해와 A-E-D-B-D 방법론</p>
+                <p class="subtitle">6개월에 3년치 성과를 만드는 방법</p>
             </section>
 
             <section id="P1-002">
@@ -57,16 +59,21 @@
             </section>
 
             <!-- 1.1 컨설팅이란? (4장) -->
-            <section id="P1-003">
-                <h2>컨설팅의 정의</h2>
-                <div class="definition">
-                    <p class="quote">"전문 지식으로 고객의 문제를 해결하는 서비스"</p>
+            <!-- Type 2: Big Visual - 컨설팅 가치 공식 -->
+            <section id="P1-003" class="big-visual-slide">
+                <h2>컨설팅 가치 공식</h2>
+
+                <div class="main-visual">
+                    <div style="text-align: center; font-size: 42px; line-height: 1.8;">
+                        <div style="color: #003d5c; font-weight: 700;">전문 지식 × 외부 시각 × 실행력</div>
+                        <div style="font-size: 64px; margin: 32px 0;">↓</div>
+                        <div style="color: #00a4a6; font-weight: 900; font-size: 72px;">16,600% ROI</div>
+                    </div>
                 </div>
-                <ul class="key-points">
-                    <li><strong>전문성</strong>: 특정 분야의 깊은 지식과 경험</li>
-                    <li><strong>문제 해결</strong>: 고객이 직면한 과제를 분석하고 해결</li>
-                    <li><strong>가치 창출</strong>: 측정 가능한 성과와 변화</li>
-                </ul>
+
+                <div class="so-what">
+                    실제 사례: 재고 최적화 프로젝트, 투자 3억 → 회수 500억
+                </div>
             </section>
 
             <section id="P1-004">
@@ -132,30 +139,45 @@
             </section>
 
             <!-- 1.2 컨설팅 산업 구조 (5장) -->
-            <section id="P1-007">
-                <h2>컨설팅 펌 유형</h2>
-                <div class="pyramid">
-                    <div class="pyramid-level tier-1">
-                        <div class="tier-label">Tier 1</div>
-                        <div class="tier-content">
-                            <strong>MBB (McKinsey, BCG, Bain)</strong>
-                            <p>전략 컨설팅 특화, 글로벌 최상위</p>
-                        </div>
-                    </div>
-                    <div class="pyramid-level tier-2">
-                        <div class="tier-label">Tier 2</div>
-                        <div class="tier-content">
-                            <strong>Big 4 (Deloitte, PwC, EY, KPMG)</strong>
-                            <p>전략 + 운영 + IT + 감사</p>
-                        </div>
-                    </div>
-                    <div class="pyramid-level tier-3">
-                        <div class="tier-label">Boutique</div>
-                        <div class="tier-content">
-                            <strong>특정 산업/영역 전문</strong>
-                            <p>제조, 금융, IT 등 특화</p>
-                        </div>
-                    </div>
+            <!-- Type 2: Big Visual - 컨설팅 펌 유형 -->
+            <section id="P1-007" class="big-visual-slide">
+                <h2>컨설팅 펌 포지셔닝</h2>
+
+                <div class="main-visual">
+                    <table style="width: 90%; margin: 0 auto; border-collapse: collapse; font-size: 20px;">
+                        <thead>
+                            <tr>
+                                <th style="background: #003d5c; color: white; padding: 20px; border: 2px solid white;">티어/특징</th>
+                                <th style="background: #003d5c; color: white; padding: 20px; border: 2px solid white;">전략</th>
+                                <th style="background: #003d5c; color: white; padding: 20px; border: 2px solid white;">운영/IT</th>
+                                <th style="background: #003d5c; color: white; padding: 20px; border: 2px solid white;">합격률</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 16px; font-weight: 700; background: #f8f9fa; border: 1px solid #ddd;">Tier 1 (MBB)</td>
+                                <td style="padding: 16px; background: #4fb3d9; color: white; font-weight: 700; border: 1px solid #ddd;">★★★</td>
+                                <td style="padding: 16px; background: #f8f9fa; border: 1px solid #ddd;">-</td>
+                                <td style="padding: 16px; background: #ff6b6b; color: white; font-weight: 700; border: 1px solid #ddd;">2%</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 16px; font-weight: 700; background: #f8f9fa; border: 1px solid #ddd;">Tier 2 (Big 4)</td>
+                                <td style="padding: 16px; background: #00a4a6; color: white; border: 1px solid #ddd;">★★</td>
+                                <td style="padding: 16px; background: #00a4a6; color: white; font-weight: 700; border: 1px solid #ddd;">★★★</td>
+                                <td style="padding: 16px; background: #fdcb6e; font-weight: 700; border: 1px solid #ddd;">5-8%</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 16px; font-weight: 700; background: #f8f9fa; border: 1px solid #ddd;">Boutique</td>
+                                <td style="padding: 16px; background: #fdcb6e; border: 1px solid #ddd;">★</td>
+                                <td style="padding: 16px; background: #fdcb6e; border: 1px solid #ddd;">★★</td>
+                                <td style="padding: 16px; background: #00b894; color: white; font-weight: 700; border: 1px solid #ddd;">10-15%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="so-what">
+                    MBB는 전략 특화, 압도적 브랜드 → 但 합격률 2% (100명 지원 시 2명만 합격)
                 </div>
             </section>
 
@@ -278,19 +300,48 @@
             </section>
 
             <!-- 1.3 PI vs BPR 비교 (4장) -->
-            <section id="P1-012">
-                <h2>프로세스 혁신의 두 가지 접근</h2>
-                <div class="two-column equal">
-                    <div class="left">
-                        <h3 class="highlight-pi">PI</h3>
-                        <p class="subtitle">Process Innovation</p>
-                        <p>점진적 개선</p>
+            <!-- Type 4: Framework - PI vs BPR 2x2 매트릭스 -->
+            <section id="P1-012" class="framework-slide">
+                <h2>PI vs BPR 선택 매트릭스</h2>
+
+                <div class="framework-container">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 40px auto; width: 85%;">
+                        <!-- Q1: 영향도 높음, 변화 작음 -->
+                        <div style="background: #e3f2fd; padding: 24px; border-radius: 8px; border-top: 4px solid #2196F3;">
+                            <h4 style="color: #1976D2; margin: 0 0 12px 0;">PI (점진적 개선)</h4>
+                            <p style="font-size: 18px; margin: 8px 0;">10-30% 개선</p>
+                            <ul style="font-size: 16px; margin: 12px 0; line-height: 1.6;">
+                                <li>안정적 환경</li>
+                                <li>리스크 회피</li>
+                                <li>3-6개월</li>
+                            </ul>
+                            <div style="margin-top: 16px; padding: 12px; background: white; border-radius: 4px; font-size: 15px;">
+                                예: 재고 관리 개선, 승인 단계 축소
+                            </div>
+                        </div>
+
+                        <!-- Q2: 영향도 높음, 변화 큼 -->
+                        <div style="background: #fce4ec; padding: 24px; border-radius: 8px; border-top: 4px solid #E91E63;">
+                            <h4 style="color: #C2185B; margin: 0 0 12px 0;">BPR (근본적 재설계)</h4>
+                            <p style="font-size: 18px; margin: 8px 0;">50-300% 개선</p>
+                            <ul style="font-size: 16px; margin: 12px 0; line-height: 1.6;">
+                                <li>위기 상황</li>
+                                <li>획기적 변화</li>
+                                <li>6-12개월</li>
+                            </ul>
+                            <div style="margin-top: 16px; padding: 12px; background: white; border-radius: 4px; font-size: 15px;">
+                                예: 보험 지급 7단계→3단계 (-64%)
+                            </div>
+                        </div>
                     </div>
-                    <div class="right">
-                        <h3 class="highlight-bpr">BPR</h3>
-                        <p class="subtitle">Business Process Reengineering</p>
-                        <p>근본적 재설계</p>
+
+                    <div style="text-align: center; margin-top: 32px; font-size: 16px; color: #666;">
+                        ← 변화 폭 작음 | 변화 폭 큼 →
                     </div>
+                </div>
+
+                <div class="framework-note">
+                    위기 상황이라면 BPR, 안정적 개선이라면 PI부터 시작하세요
                 </div>
             </section>
 
@@ -375,38 +426,59 @@
                 <p class="subtitle">컨설팅 프로젝트 라이프사이클</p>
             </section>
 
+            <!-- Type 5: Process Flow - A-E-D-B-D with 실제 사례 -->
             <section id="P1-017">
-                <h2>A-E-D-B-D 전체 흐름</h2>
+                <h2>재고 최적화 프로젝트 타임라인</h2>
+
                 <div class="process-flow">
                     <div class="process-step assess">
-                        <div class="step-icon">A</div>
+                        <div class="step-icon">🔍</div>
                         <div class="step-name">ASSESS</div>
-                        <div class="step-desc">현재 상태 분석</div>
+                        <div class="step-desc">3주<br>재고 80일 파악</div>
                     </div>
                     <div class="arrow">→</div>
                     <div class="process-step envision">
-                        <div class="step-icon">E</div>
+                        <div class="step-icon">🎯</div>
                         <div class="step-name">ENVISION</div>
-                        <div class="step-desc">미래 방향 수립</div>
+                        <div class="step-desc">2주<br>30일 목표 수립</div>
                     </div>
                     <div class="arrow">→</div>
                     <div class="process-step design">
-                        <div class="step-icon">D</div>
+                        <div class="step-icon">📐</div>
                         <div class="step-name">DESIGN</div>
-                        <div class="step-desc">상세 설계</div>
+                        <div class="step-desc">4주<br>SCM 재설계</div>
                     </div>
                     <div class="arrow">→</div>
                     <div class="process-step build">
-                        <div class="step-icon">B</div>
+                        <div class="step-icon">🔨</div>
                         <div class="step-name">BUILD</div>
-                        <div class="step-desc">구축 및 개발</div>
+                        <div class="step-desc">10주<br>ERP 구축</div>
                     </div>
                     <div class="arrow">→</div>
                     <div class="process-step deploy">
-                        <div class="step-icon">D</div>
+                        <div class="step-icon">🚀</div>
                         <div class="step-name">DEPLOY</div>
-                        <div class="step-desc">실행 및 안정화</div>
+                        <div class="step-desc">3주<br>전사 확산</div>
                     </div>
+                </div>
+
+                <div class="process-meta" style="display: flex; justify-content: center; gap: 48px; margin-top: 32px; font-size: 18px;">
+                    <div class="meta-item">
+                        <span class="meta-icon">⏱️</span>
+                        <span>총 소요: 5.5개월</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">💰</span>
+                        <span>투자: 3억원</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">📈</span>
+                        <span>회수: 500억원 (ROI 16,600%)</span>
+                    </div>
+                </div>
+
+                <div class="so-what-box" style="margin-top: 32px;">
+                    모든 컨설팅 프로젝트는 이 5단계를 따라 진행되며, 평균 6개월이 소요돼요
                 </div>
             </section>
 
@@ -470,25 +542,46 @@
                 <p class="subtitle">성공적인 컨설턴트가 되기 위한 5C</p>
             </section>
 
-            <section id="P1-021">
-                <h2>5C 역량 모델</h2>
-                <div class="pentagon">
-                    <div class="pentagon-center">5C</div>
-                    <div class="pentagon-point p1">
-                        <div class="point-label">Conceptual<br>Thinking</div>
+            <!-- Type 2: Big Visual - McKinsey 5C 역량 모델 -->
+            <section id="P1-021" class="big-visual-slide">
+                <h2>McKinsey가 뽑는 사람</h2>
+
+                <div class="main-visual">
+                    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin: 40px auto; width: 90%;">
+                        <div style="text-align: center; padding: 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white;">
+                            <div style="font-size: 48px; margin-bottom: 12px;">🧠</div>
+                            <h4 style="margin: 12px 0; font-size: 18px;">Conceptual<br>Thinking</h4>
+                            <p style="font-size: 14px; opacity: 0.9;">구조화된<br>사고</p>
+                        </div>
+                        <div style="text-align: center; padding: 24px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; color: white;">
+                            <div style="font-size: 48px; margin-bottom: 12px;">💬</div>
+                            <h4 style="margin: 12px 0; font-size: 18px;">Communication</h4>
+                            <p style="font-size: 14px; opacity: 0.9;">명확한<br>전달</p>
+                        </div>
+                        <div style="text-align: center; padding: 24px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; color: white;">
+                            <div style="font-size: 48px; margin-bottom: 12px;">🤝</div>
+                            <h4 style="margin: 12px 0; font-size: 18px;">Collaboration</h4>
+                            <p style="font-size: 14px; opacity: 0.9;">팀워크<br>협업</p>
+                        </div>
+                        <div style="text-align: center; padding: 24px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); border-radius: 12px; color: white;">
+                            <div style="font-size: 48px; margin-bottom: 12px;">🎯</div>
+                            <h4 style="margin: 12px 0; font-size: 18px;">Client<br>Focus</h4>
+                            <p style="font-size: 14px; opacity: 0.9;">고객<br>중심</p>
+                        </div>
+                        <div style="text-align: center; padding: 24px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-radius: 12px; color: white;">
+                            <div style="font-size: 48px; margin-bottom: 12px;">💪</div>
+                            <h4 style="margin: 12px 0; font-size: 18px;">Commitment</h4>
+                            <p style="font-size: 14px; opacity: 0.9;">헌신<br>책임감</p>
+                        </div>
                     </div>
-                    <div class="pentagon-point p2">
-                        <div class="point-label">Communication</div>
+
+                    <div style="margin-top: 40px; text-align: center; font-size: 20px; color: #666;">
+                        <strong>합격자 vs 불합격자의 차이:</strong> 5C 중 4개 이상 우수
                     </div>
-                    <div class="pentagon-point p3">
-                        <div class="point-label">Collaboration</div>
-                    </div>
-                    <div class="pentagon-point p4">
-                        <div class="point-label">Client<br>Focus</div>
-                    </div>
-                    <div class="pentagon-point p5">
-                        <div class="point-label">Commitment</div>
-                    </div>
+                </div>
+
+                <div class="so-what">
+                    기술은 배울 수 있지만, 5C는 태도와 습관에서 나와요
                 </div>
             </section>
 
@@ -578,77 +671,87 @@
                 <p class="subtitle">성장 경로와 미래</p>
             </section>
 
-            <section id="P1-028">
-                <h2>컨설턴트의 하루</h2>
-                <div class="daily-schedule">
-                    <div class="time-slot">
-                        <div class="time">09:00</div>
-                        <div class="activity">팀 미팅 (이슈 공유, 오늘 할 일)</div>
+            <!-- Type 3: Data Visualization - 컨설턴트의 하루 -->
+            <section id="P1-028" class="data-slide">
+                <h2>컨설턴트 시간 배분 (실제 데이터)</h2>
+
+                <div class="big-numbers">
+                    <div class="number-card">
+                        <div class="big-number">40%</div>
+                        <div class="number-label">분석 & 문서화<br>(PPT, Excel)</div>
                     </div>
-                    <div class="time-slot">
-                        <div class="time">10:00</div>
-                        <div class="activity">고객사 인터뷰 / 데이터 수집</div>
+                    <div class="number-card">
+                        <div class="big-number">30%</div>
+                        <div class="number-label">고객사 인터뷰<br>& 미팅</div>
                     </div>
-                    <div class="time-slot">
-                        <div class="time">12:00</div>
-                        <div class="activity">점심 (팀원 또는 고객과)</div>
+                    <div class="number-card">
+                        <div class="big-number">20%</div>
+                        <div class="number-label">팀 내부<br>협업 & 리뷰</div>
                     </div>
-                    <div class="time-slot">
-                        <div class="time">13:00</div>
-                        <div class="activity">분석 작업 (엑셀, PPT)</div>
+                    <div class="number-card">
+                        <div class="big-number">10%</div>
+                        <div class="number-label">학습 &<br>스킬 개발</div>
                     </div>
-                    <div class="time-slot">
-                        <div class="time">17:00</div>
-                        <div class="activity">팀 리뷰 (중간 결과물 점검)</div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">18:00</div>
-                        <div class="activity">저녁 식사</div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">19:00</div>
-                        <div class="activity">보고서 작성 / 슬라이드 제작</div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">22:00</div>
-                        <div class="activity">퇴근 (프로젝트 상황에 따라 유동적)</div>
-                    </div>
+                </div>
+
+                <div style="margin-top: 40px; text-align: center; font-size: 18px; color: #666;">
+                    <strong>하루 평균 근무시간:</strong> 10-12시간 (프로젝트 막바지는 13-14시간)
+                </div>
+
+                <div class="insight-box">
+                    문서 작성 능력이 컨설턴트 업무의 40% → PPT, Excel 숙련도가 필수
                 </div>
             </section>
 
-            <section id="P1-029">
-                <h2>커리어 래더</h2>
-                <div class="career-ladder">
-                    <div class="level level-6">
-                        <div class="title">Partner</div>
-                        <div class="years">15+ years</div>
-                        <div class="role">사업 책임</div>
-                    </div>
-                    <div class="level level-5">
-                        <div class="title">Principal / Director</div>
-                        <div class="years">12~15 years</div>
-                        <div class="role">조직 리더십</div>
-                    </div>
-                    <div class="level level-4">
-                        <div class="title">Senior Manager</div>
-                        <div class="years">8~12 years</div>
-                        <div class="role">프로젝트 총괄</div>
-                    </div>
-                    <div class="level level-3">
-                        <div class="title">Manager</div>
-                        <div class="years">5~8 years</div>
-                        <div class="role">팀 리드</div>
-                    </div>
-                    <div class="level level-2">
-                        <div class="title">Senior Consultant</div>
-                        <div class="years">3~5 years</div>
-                        <div class="role">독립 수행</div>
-                    </div>
-                    <div class="level level-1">
-                        <div class="title">Consultant / Associate</div>
-                        <div class="years">0~3 years</div>
-                        <div class="role">분석 실무</div>
-                    </div>
+            <!-- Type 3: Data - 커리어 래더 with 연봉 데이터 -->
+            <section id="P1-029" class="data-slide">
+                <h2>MBB 커리어 트랙 (연봉 포함)</h2>
+
+                <table style="width: 90%; margin: 40px auto; border-collapse: collapse; font-size: 18px;">
+                    <thead>
+                        <tr style="background: #003d5c; color: white;">
+                            <th style="padding: 16px; border: 1px solid white;">직급</th>
+                            <th style="padding: 16px; border: 1px solid white;">연차</th>
+                            <th style="padding: 16px; border: 1px solid white;">연봉 (MBB 기준)</th>
+                            <th style="padding: 16px; border: 1px solid white;">주요 역할</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #f8f9fa;">
+                            <td style="padding: 12px; border: 1px solid #ddd;"><strong>Associate</strong></td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">0-2년</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; color: #00a4a6; font-weight: 700;">$120K</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">분석 실무</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd;"><strong>Senior Associate</strong></td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">2-3년</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; color: #00a4a6; font-weight: 700;">$150K</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">독립 수행</td>
+                        </tr>
+                        <tr style="background: #f8f9fa;">
+                            <td style="padding: 12px; border: 1px solid #ddd;"><strong>Manager (EM)</strong></td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">3-5년</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; color: #4fb3d9; font-weight: 700;">$200K</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">팀 리드</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd;"><strong>Senior Manager</strong></td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">5-7년</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; color: #4fb3d9; font-weight: 700;">$280K</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">프로젝트 총괄</td>
+                        </tr>
+                        <tr style="background: #f8f9fa;">
+                            <td style="padding: 12px; border: 1px solid #ddd;"><strong>Partner</strong></td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">7-10년</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; color: #ff6b6b; font-weight: 700;">$500K+</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">사업 책임</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="insight-box">
+                    Up or Out: 매년 10-30% 퇴사 → 살아남으면 7년 만에 파트너 ($500K+)
                 </div>
             </section>
 
@@ -773,10 +876,14 @@
             <!-- Part 2: A-E-D-B-D 방법론 심화 (45장) -->
 
             <!-- 2.1 ASSESS (12장) -->
-            <section id="P2-001" class="phase-title assess-phase">
-                <div class="phase-icon">A</div>
-                <h1>ASSESS</h1>
-                <p class="phase-subtitle">현재 상태 분석과 이슈 도출</p>
+            <!-- Type 1: Hero Slide - ASSESS -->
+            <section id="P2-001" class="hero-slide" style="background: linear-gradient(135deg, #8B5CF6 0%, #667eea 100%);">
+                <div class="visual" style="font-size: 120px;">🔍</div>
+                <h1 style="color: white;">ASSESS</h1>
+                <p class="subtitle" style="color: white; font-size: 32px; font-weight: 700;">100개 문제 중 3개를 찾아내는 법</p>
+                <div style="margin-top: 48px; font-size: 24px; color: white; opacity: 0.9;">
+                    핵심 질문: "진짜 문제는 무엇인가?"
+                </div>
             </section>
 
             <!-- TODO: 나머지 Part 2 슬라이드는 다음 단계에서 추가 -->
@@ -1091,45 +1198,50 @@
                 </div>
             </section>
 
-            <section id="P2-011">
-                <h2>이슈 구조화 (Issue Tree)</h2>
-                <div class="issue-tree-example">
-                    <div class="root-issue">
-                        <strong>핵심 이슈:</strong> 주문처리 리드타임이 목표 대비 3일 초과
-                    </div>
-                    <div class="tree-branches">
-                        <div class="branch">
-                            <div class="branch-title">프로세스</div>
-                            <div class="branch-content">
-                                <p>수작업 단계 과다</p>
-                                <ul>
-                                    <li>주문 접수: 수기 입력</li>
-                                    <li>재고 확인: 여러 시스템 조회</li>
-                                    <li>출하 지시: 승인 단계 과다</li>
-                                </ul>
-                            </div>
+            <!-- Type 2: Big Visual - Issue Tree 실제 사례 -->
+            <section id="P2-011" class="big-visual-slide">
+                <h2>실전 Issue Tree: 유통사 매출 감소</h2>
+
+                <div class="main-visual">
+                    <div style="background: #f8f9fa; padding: 32px; border-radius: 12px; margin: 24px auto; width: 90%;">
+                        <!-- Root -->
+                        <div style="background: #ff6b6b; color: white; padding: 16px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 22px; margin-bottom: 24px;">
+                            매출 감소 -15% YoY
                         </div>
-                        <div class="branch">
-                            <div class="branch-title">시스템</div>
-                            <div class="branch-content">
-                                <p>실시간 정보 부재</p>
-                                <ul>
-                                    <li>재고 정보 1일 1회 업데이트</li>
-                                    <li>주문-재고 연계 누락</li>
-                                </ul>
+
+                        <!-- Level 1 -->
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 20px;">
+                            <div style="background: #fdcb6e; padding: 16px; border-radius: 8px;">
+                                <h4 style="margin: 0 0 8px 0; font-size: 18px;">객단가 하락 (-8%)</h4>
+                                <div style="font-size: 14px; line-height: 1.6;">
+                                    • 프로모션 남발<br>
+                                    • 저가 상품 비중↑
+                                </div>
                             </div>
-                        </div>
-                        <div class="branch">
-                            <div class="branch-title">조직</div>
-                            <div class="branch-content">
-                                <p>R&R 불명확</p>
-                                <ul>
-                                    <li>영업-물류 간 책임 중복</li>
-                                    <li>의사결정 지연 (평균 1일)</li>
-                                </ul>
+                            <div style="background: #74b9ff; padding: 16px; border-radius: 8px;">
+                                <h4 style="margin: 0 0 8px 0; font-size: 18px;">방문객수 감소 (-5%)</h4>
+                                <div style="font-size: 14px; line-height: 1.6;">
+                                    • 온라인 전환<br>
+                                    • 입지 경쟁력 약화
+                                </div>
+                            </div>
+                            <div style="background: #a29bfe; padding: 16px; border-radius: 8px;">
+                                <h4 style="margin: 0 0 8px 0; font-size: 18px;">구매전환율 (-3%)</h4>
+                                <div style="font-size: 14px; line-height: 1.6;">
+                                    • 재고 부족 (품절)<br>
+                                    • 서비스 품질 저하
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div style="text-align: center; margin-top: 24px; font-size: 18px; color: #666;">
+                        100개 문제를 3개 핵심 이슈로 구조화 → 프로모션 정책, 재고 보충, 온라인 통합
+                    </div>
+                </div>
+
+                <div class="so-what">
+                    Issue Tree로 구조화하니 100개가 3개로 → 집중 실행 가능
                 </div>
             </section>
 
